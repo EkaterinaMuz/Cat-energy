@@ -1,10 +1,18 @@
 const gulp = require("gulp");
+const deploy = require('gulp-gh-pages');
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+
+// Deploy
+
+gulp.task('deploy', function () {
+  return gulp.src("./source/**/*")
+    .pipe(deploy())
+});
 
 // Styles
 
