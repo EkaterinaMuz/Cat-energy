@@ -1,5 +1,15 @@
+.promo
+  width: 100%
+  min-height: 696px
+  @media ( min-width: 1200px )
+    background-image: url('../img/index-background-desktop@1x.jpg')
+    background-repeat: no-repeat
+    background-size: 50% 100%
+    background-position: 100% 0%
+
 .container
-  width: 320px
+  min-width: 320px
+  height: 100%
   padding: 0 20px
   margin: 0 auto
 
@@ -11,5 +21,19 @@
     width: 1200px
     padding: 0 60px
 
-
-
+.btn
+  width: 280px
+  height: 40px
+  border: none
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 18px
+  text-align: center
+  text-transform: uppercase
+  color: #FFFFFF
+  background-color: $main-green
+  cursor: pointer
+  transition: 0.25s
+  &:hover
+    background-color: $hover-green

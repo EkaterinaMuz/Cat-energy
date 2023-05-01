@@ -13,6 +13,7 @@
   font-display: swap;
   src: local("Oswald Medium"), url("../../fonts/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswaldregular.woff1") format("woff");
 }
+
 html {
   height: 100%;
 }
