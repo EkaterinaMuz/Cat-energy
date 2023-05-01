@@ -25,6 +25,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "deploy": "gulp deploy",
+    "watcher": "gulp watcher",
     "start": "gulp"
   },
   "browserslist": [

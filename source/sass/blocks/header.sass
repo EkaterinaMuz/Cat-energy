@@ -4,8 +4,10 @@
   background-color: $default-white
 
   @media ( min-width: 768px )
-    height: 90px
+    height: 109px
 
+  @media ( min-width: 1200px )
+    background-color: transparent
 
 .header__inner
   display: flex
@@ -54,6 +56,9 @@
   transition: 0.25s all
   &:hover
     opacity: 0.6
+
+  @media ( min-width: 1200px )
+    color: $default-white
 
 
 .hamburger
