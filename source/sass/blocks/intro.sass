@@ -8,9 +8,6 @@
     background-repeat: no-repeat
     background-size: 100% 70%
 
-  @media (min-width: 768px)
-    padding-left: 87px
-
   @media (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 400px)
     background-image: url("../img/index-background-mobile@2x.jpg")
 
@@ -27,6 +24,9 @@
     @media (min-width: 400px)
       align-items: flex-start
       padding-top: 40px
+
+    @media (min-width: 768px)
+      padding-left: 87px
 
   &__text
     max-width: 396px
@@ -61,20 +61,23 @@
   &__img
     @media (min-width: 401px)
       position: absolute
-      // top: 158px
-      // left: 107px
       top: 88%
       left: 21%
 
-    @media (min-width: 600px)
+    @media (min-width: 500px)
       top: 94%
-      left: 0
+      left: 157px
+
+    @media (min-width: 600px)
+      top: 92%
+      left: 80px
 
     @media (min-width: 768px)
       top: 240px
       left: -87px
 
     @media (min-width: 1200px)
+      top: 45px
       left: 30%
 
   &__btn

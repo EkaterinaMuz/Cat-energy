@@ -7,7 +7,7 @@
 *.psd
 *.sublime*
 build/
-.publish/
+# .publish/
 node_modules/
 npm-debug.*
 Thumbs.db
