@@ -1,7 +1,12 @@
 .promo
   width: 100%
-  min-height: 696px
+  min-height: 480px
+  @media ( min-width: 600px )
+    min-height: 700px
+  @media ( min-width: 768px )
+    min-height: 950px
   @media ( min-width: 1200px )
+    min-height: 696px
     background-image: url('../img/index-background-desktop@1x.jpg')
     background-repeat: no-repeat
     background-size: 50% 100%
