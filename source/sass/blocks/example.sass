@@ -1,0 +1,151 @@
+.example
+  min-height: 705px
+  padding: 27px 0 25px 0
+  background-color: $example-color
+
+  &__title
+    margin-bottom: 33px
+    font-size: 36px
+    line-height: 40px
+    color: $default-black
+
+  &__text
+    margin-bottom: 20px
+    font-family: 'Arial'
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    color: $medium-grey
+
+    @media ( min-width: 768px )
+      margin-bottom: 54px
+    @media ( min-width: 1200px )
+      margin-bottom: 70px
+
+  &__stats
+    @media ( min-width: 768px )
+      display: flex
+      justify-content: space-between
+      align-items: center
+    @media ( min-width: 1200px )
+      flex-direction: column
+      align-items: flex-start
+
+  &__stats-list
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-bottom: 35px
+
+    @media ( min-width: 768px )
+      min-width: 366px
+      margin-bottom: 0
+    @media ( min-width: 1200px )
+      margin-bottom: 55px
+
+  &__stats-item
+    position: relative
+    min-width: 124px
+    padding: 15px 15px
+    border: 1px solid #CDCDCD
+    border-radius: 5px
+    font-size: 24px
+    line-height: 24px
+    text-align: center
+    text-transform: uppercase
+    @media ( min-width: 768px )
+      min-width: 162px
+      font-size: 24px
+    @media ( min-width: 1200px )
+      font-size: 30px
+      padding-bottom: 25px
+
+  &__stats-label
+    position: absolute
+    left: 50%
+    bottom: -30%
+    max-width: 77px
+    transform: translateX(-50%)
+    font-size: 12px
+    line-height: 12px
+    text-align: center
+    color: $medium-grey
+    text-transform: lowercase
+    background-color: $example-color
+    @media ( min-width: 768px )
+      min-width: 100px
+      bottom: -12%
+    @media ( min-width: 1200px )
+      font-size: 14px
+
+  &__stats-price
+    font-size: 14px
+    line-height: 20px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    span
+      padding-left: 10px
+    @media ( min-width: 768px )
+      max-width: 300px
+      text-align: right
+      font-size: 20px
+      line-height: 30px
+
+    @media ( min-width: 1200px )
+      max-width: 350px
+      span
+        margin-left: 63px
+
+  &__interactive-control
+    text-align: center
+    font-size: 20px
+    line-height: 30px
+    text-transform: uppercase
+
+  &__interactive-before,
+  &__interactive-after
+    border: none
+    @media ( min-width: 768px )
+      border-bottom: 1px dashed $icon-color
+
+@mixin thumb-style
+  -webkit-appearance: none
+  appearance: none
+  width: 35px
+  height: 6px
+  background-color: $main-green
+  border-radius: 6px
+  @media ( min-width: 768px )
+    width: 34px
+    height: 34px
+    background-color: transparent
+    background-image: url('../img/slider-control.svg')
+    background-size: cover
+
+input[type='range']
+  width: 84px
+  height: 14px
+  padding: 4px 6px
+  margin: 0 15px
+  border: 1px solid #CDCDCDCD
+  border-radius: 6px
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  &:focus
+    outline: none
+  @media ( min-width: 768px )
+    width: 428px
+    height: 6px
+    background: #DCDCDC
+    border: none
+
+  // &::-webkit-slider-runnable-track
+  //   &::after
+
+  &::-webkit-slider-thumb
+    @include thumb-style
+
+  &::-moz-range-thumb
+    @include thumb-style
