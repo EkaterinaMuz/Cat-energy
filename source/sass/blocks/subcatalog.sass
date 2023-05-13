@@ -1,22 +1,32 @@
 .subcatalog
   padding: 28px 0 40px
   &__wrapper
+    @media ( min-width: 1200px )
+      width: 100%
+      display: flex
+      gap: 45px
+      justify-content: space-between
+      align-items: center
+  &__list
     @media ( min-width: 768px )
+      width: 100%
       border: 2px solid #EBEBEB
+      @media (min-width: 1200px)
+        border: none
   &__title
     position: relative
     padding-bottom: 35px
     margin-bottom: 13px
     font-size: 24px
     line-height: 24px
-    &::after
-      position: absolute
-      top: 25%
-      left: 245px
-      content: ''
-      width: calc(100vw - 265px)
-      height: 2px
-      background-color: $main-green
+    // &::after
+    //   position: absolute
+    //   top: 50%
+    //   left: 245px
+    //   content: ''
+    //   width: calc(100vw - 338px)
+    //   height: 2px
+    //   background-color: $main-green
 
     @media ( min-width: 768px )
       padding-bottom: 0
@@ -24,6 +34,7 @@
 
   &__item
     position: relative
+    width: 100%
     padding-bottom: 20px
     margin-bottom: 12px
     border-bottom: 2px solid #EBEBEB
@@ -35,6 +46,17 @@
       padding: 26px 37px 28px 38px
       &:last-child
         border: none
+    @media (min-width: 1200px)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: 50px
+      padding: 15px 0 17px
+      margin: 0
+      &:first-child
+        border-top: 2px solid #EBEBEB
+      &:last-child
+        border-bottom: 2px solid #EBEBEB
 
     &-title
       margin-bottom: 13px
@@ -52,6 +74,9 @@
         margin-bottom: 27px
         justify-content: space-between
         align-items: center
+      @media (min-width: 1200px)
+        width: 500px
+        margin-bottom: 0
 
     &-group
       display: flex
@@ -69,6 +94,8 @@
 
   &__btn
     width: 100%
+    @media (min-width: 1200px)
+      width: 245px
 
   &__bonus
     position: relative
@@ -77,6 +104,10 @@
     padding-top: 186px
     width: 100%
     height: 100%
+    @media (min-width: 1200px)
+      min-width: 245px
+      min-height: 290px
+      margin: 0
     &::before
       content: ""
       position: absolute
@@ -87,7 +118,7 @@
       transform: translateX(-50%)
       z-index: -1
       width: 280px
-      height: 289px
+      height: 290px
       background-image: url("../img/gift-photo-mobile@1x.jpg")
       background-repeat: no-repeat
       background-position: 50%
@@ -107,7 +138,7 @@
       @media (min-width: 1200px)
         width: 245px
         height: 289px
-        background-image: url("../img/gift-photo-desktop.jpg")
+        background-image: url("../img/gift-photo-desktop@1x.jpg")
 
         @media (min-resolution: 2dppx)
           background-image: url("../img/gift-photo-desktop@2x.jpg")
@@ -128,6 +159,13 @@
         top: 75px
         left: 550px
         text-align: left
+      @media (min-width: 1200px)
+        min-width: 161px
+        left: 50%
+        transform: translateX(-50%)
+        top: 60%
+        bottom: 20px
+        text-align: center
 
     &-icon
       position: absolute
@@ -136,6 +174,8 @@
       width: 78px
       height: 80px
       transform: translateX(-50%)
-      path: white
       @media (min-width: 768px)
         left: 78px
+      @media (min-width: 1200px)
+        left: 50%
+        transform: translateX(-50%)
