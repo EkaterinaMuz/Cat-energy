@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.min.css" />
+  <title>Подбор программы</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo-group">
+          <a class="header__logo-link">
+            <picture>
+              <source media='(min-width: 1200px)' srcset="./img/logo-desktop.svg">
+              <source media='(min-width: 768px)' srcset="./img/logo-tablet.svg">
+              <img
+                class="header__logo-img"
+                src="./img/logo-mobile.svg"
+                width="33px"
+                height="37px"
+                alt="logo"
+              />
+            </picture>
+          </a>
+          <a class="header__logo-link">
+            <img
+              class="header__logo-img header__logo-text"
+              src="./img/logo-mobile-text.svg"
+              alt="logo"
+              width="101px"
+              height="18px"
+            />
+          </a>
+        </div>
+        <nav class="navbar-wrapper">
+          <ul class="navbar__list">
+
+            <li class="navbar__item">
+              <a href="/" class="navbar__link navbar__link-catalog">Главная</a>
+            </li>
+            <li class="navbar_item">
+              <a href="/catalog.html" class="navbar__link navbar__link-catalog">Каталог продукции</a>
+            </li>
+            <li class="navbar__item">
+              <a href='/form.html' class="navbar__link navbar__link-catalog">Подбор программы</a>
+            </li>
+
+          </ul>
+        </nav>
+        <nav class="hamburger">
+          <button class="hamburger__btn">
+            <img
+              class="logo__link-img"
+              src="./img/logo-mobile.svg"
+              alt="logo"
+              width="24px"
+              height="16px"
+            />
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="form">
+    <div class="container">
+      <h1 class="form__title">Подбор программы</h1>
+      <h3 class="form__subtitle">Заполните анкету, и мы подберем
+        программу питания для вашего кота</h3>
+       <form>
+        <fieldset class="form__group form__group--cat-info">
+          <legend class="visually-hidden">
+            Данные кота
+          </legend>
+          <label class="form__label">
+            <span>ИМЯ:*</span>
+            <input class="form__input" type="text" name="" placeholder="барсик" required>
+          </label>
+          <label class="form__label">
+            <span>Вес (кг):*</span>
+            <input class="form__input" type="text" name="" placeholder="7" required>
+          </label>
+          <label class="form__label">
+            <span>Возраст (лет):</span>
+            <input class="form__input" type="text" name="" placeholder="7" required>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__group form__group--cat-info">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <label class="form__label form__label-radio">
+            <input class="form__radio" type="radio" name="program-choice" checked="checked">
+            <span class="form__radio-text">похудение</span>
+          </label>
+          <label class="form__label form__label-radio">
+            <input class="form__radio" type="radio" name="program-choice">
+            <span class="form__radio-text">Набор массы</span>
+          </label>
+          <label class="form__label form__label-radio">
+            <input class="form__radio" type="radio" name="program-choice">
+            <span class="form__radio-text">Не знаю (Нужен ваш совет)</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__group form__group--owner-info">
+          <legend class="form__legend">Контактные данные
+            (владельца кота)</legend>
+          <label class="form__label">
+            <span>E-mail:*</span>
+            <input class="form__input form__input--icon" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+            <img class="form__input-icon" src='./img/icon-mail.svg' alt="email icon">
+          </label>
+          <label class="form__label">
+            <span>Телефон:*</span>
+            <input class="form__input form__input--icon" type="text" name="phone" placeholder="8 (960) 900-60-90" required>
+            <img class="form__input-icon" src='./img/icon-phone.svg' alt="phone icon">
+          </label>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend class="form__legend">Комментарий</legend>
+          <label class="visually-hidden">
+            Комментарий
+          <textarea class="form__comment" placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend class="form__legend">Дополнительно</legend>
+          <label class="form__label">
+            <input class="form__checkbox" type="checkbox" checked name="sugar">
+            сахарозаменитель
+          </label>
+          <label class="form__label">
+            <input class="form__checkbox" type="checkbox" name="water">
+            питьевая вода
+          </label>
+          <label class="form__label">
+            <input class="form__checkbox" type="checkbox" name="milk">
+            молоко
+          </label>
+          <label class="form__label">
+            <input class="form__checkbox" type="checkbox" name="vitamins">
+            витамины
+          </label>
+        </fieldset>
+        <button class="btn" type="submit">отправить заявку</button>
+       </form>
+       <p>* — Обязательные поля</p>
+
+    </div>
+  </section>
+</body>
+</html>
