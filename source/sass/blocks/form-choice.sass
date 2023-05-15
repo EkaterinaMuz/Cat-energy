@@ -1,0 +1,74 @@
+.form
+  &__radio
+    display: none
+
+  &__label
+    margin-bottom: 0
+    &:not(:last-child)
+      margin-bottom: 25px
+
+  &__radio-text
+    position: relative
+    padding-left: 45px
+    justify-content: flex-start
+    &::before
+      position: absolute
+      top: -5px
+      left: 0
+      content: ''
+      width: 30px
+      height: 30px
+      border: 1px solid #CDCDCD
+      border-radius: 100%
+    &::after
+      position: absolute
+      top: 3px
+      left: 8.4px
+      transform: translate(-50%, -50%)
+      content: ''
+      width: 13.5px
+      height: 13.5px
+      border-radius: 100%
+      background-color: $main-green
+      opacity: 0
+      transform: scale(0.8)
+
+.form__radio:checked + .form__radio-text::after
+  background-color: $main-green
+  transform: scale(1)
+  opacity: 1
+  transition: 0.3s
+
+.form
+  &__checkbox
+    display: none
+  &__checkbox-text
+    position: relative
+    padding-left: 45px
+    justify-content: flex-start
+    &::before
+      position: absolute
+      top: -5px
+      left: 0
+      content: ''
+      width: 30px
+      height: 30px
+      border: 1px solid #CDCDCD
+    &::after
+      position: absolute
+      top: 3px
+      left: 6.4px
+      transform: translate(-50%, -50%)
+      content: ''
+      width: 18px
+      height: 14px
+      background-repeat: no-repeat
+      background-position: 50%
+      opacity: 0
+      transform: scale(0.8)
+
+.form__checkbox:checked + .form__checkbox-text::after
+  background-image: url(../img/icon-tick.svg)
+  transform: scale(1)
+  opacity: 1
+  transition: 0.3s

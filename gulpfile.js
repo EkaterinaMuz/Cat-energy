@@ -10,6 +10,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const rigger = require('gulp-rigger');
 
 
 // Imagemin
@@ -67,7 +68,7 @@ exports.server = server;
 const watcher = () => {
   return (
     gulp.watch("source/sass/**/*.sass", gulp.series("styles")),
-    gulp.watch("source/*.html").on("change", sync.reload)
+    gulp.watch("source/**/*.html").on("change", sync.reload)
   )
 }
 
@@ -99,11 +100,23 @@ const copy = () => {
 exports.copy = copy;
 
 
+// HTML
+
+// const html = () => {
+//   return gulp.src('source/**/*.html')
+//       .pipe(rigger())
+//       .pipe(gulp.dest('build'))
+// }
+
+// exports.html = html
+
+
 // Build
 
 const build = gulp.series(
   clean,
   imgoptimmize,
+  // html,
   copy,
   styles
 )
