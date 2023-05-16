@@ -22,6 +22,9 @@
     @media ( min-width: 1200px )
       margin-bottom: 70px
 
+  &__content
+    margin-bottom: 42px
+
   &__stats
     @media ( min-width: 768px )
       display: flex
@@ -97,17 +100,31 @@
       span
         margin-left: 63px
 
-  &__interactive-control
-    text-align: center
-    font-size: 20px
-    line-height: 30px
-    text-transform: uppercase
+  &__interactive
+    position: relative
+    min-height: 295px
 
-  &__interactive-before,
-  &__interactive-after
-    border: none
-    @media ( min-width: 768px )
-      border-bottom: 1px dashed $icon-color
+    &-cat
+      position: absolute
+      top: 0
+      left: 0
+
+    &-control
+      position: absolute
+      width: 100%
+      bottom: 10px
+      left: 50%
+      transform: translate(-50%)
+      text-align: center
+      font-size: 20px
+      line-height: 30px
+      text-transform: uppercase
+
+    &-before,
+    &-after
+      border: none
+      @media ( min-width: 768px )
+        border-bottom: 1px dashed $icon-color
 
 @mixin thumb-style
   -webkit-appearance: none
@@ -140,9 +157,6 @@ input[type='range']
     height: 6px
     background: #DCDCDC
     border: none
-
-  // &::-webkit-slider-runnable-track
-  //   &::after
 
   &::-webkit-slider-thumb
     @include thumb-style
