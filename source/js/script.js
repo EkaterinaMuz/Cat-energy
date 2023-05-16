@@ -4,6 +4,7 @@ const menu = document.querySelector('.navbar-wrapper');
 const menuItems = document.querySelectorAll('.navbar-list');
 const overlay = document.querySelector('.layout');
 const closeBtn = document.querySelector('.navbar__close');
+const menuLink = document.querySelector('.navbar__link');
 
 hamburger.addEventListener('click', openMenu);
 closeBtn.addEventListener('click', closeMenu);
@@ -21,12 +22,23 @@ for(item of menuItems) {
 
 function openMenu() {
     menu.classList.add('show');
-    overlay.style.display = 'block';
+    overlay.classList.add('show');
     document.body.style.overflow = 'hidden';
 };
 
 function closeMenu() {
     menu.classList.remove('show')
-    overlay.style.display = 'none';
+    overlay.classList.remove('show');
     document.body.style.overflow = '';
 };
+
+
+// Toggle active menu link
+
+menuLink.addEventListener('click', () => {
+  return window.location.href
+  menuLink.classList.toggle('active')
+
+})
+
+

@@ -29,6 +29,9 @@
 
 .header__logo-img
   width: 100%
+  max-width: 174px
+  @media ( min-width: 1200px )
+    max-width: 200px
 
 .header__logo-text
   @media ( min-width: 768px )
@@ -48,7 +51,6 @@
     visibility: hidden
     transition: .5s all
   @media ( min-width: 768px )
-    display: none
 
 .navbar__close
   position: absolute
@@ -65,8 +67,9 @@
   gap: 40px
   color: $default-white
   @media ( min-width: 768px )
+    width: 460px
+    flex-direction: row
     justify-content: space-between
-    width: 440px
     color: $default-black
 
 .navbar__link
@@ -79,6 +82,8 @@
   transition: 0.25s all
   &:hover
     opacity: 0.6
+  @media ( min-width: 768px )
+    padding: 0 0 10px 0
 
 .navbar__link-index
   @media ( min-width: 1200px )
@@ -95,9 +100,6 @@
   @media ( min-width: 768px )
     display: none
 
-  &__list
-    display: none
-
 .layout
   position: fixed
   width: 100%
@@ -108,8 +110,11 @@
   visibility: hidden
   background-color: rgba(0, 0, 0, 0.5)
   z-index: 99
-  @media ( min-width: 768px )
 
 .show
   opacity: 1
   visibility: visible
+
+.active
+  @media ( min-width: 768px )
+    border-bottom: 2px solid $main-green
