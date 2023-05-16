@@ -39,31 +39,23 @@
               </a>
             </div>
             <nav class="navbar-wrapper">
+               <svg class="menu__close" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="white"/>
+        </svg>
               <ul class="navbar__list">
-
                 <li class="navbar__item">
                   <a href="/" class="navbar__link navbar__link-index">Главная</a>
                 </li>
                 <li class="navbar_item">
-                  <a href='/catalog.html' class="navbar__link navbar__link-index">Каталог продукции</a>
+                  <a href="/catalog.html" href='/catalog.html' class="navbar__link navbar__link-index">Каталог продукции</a>
                 </li>
                 <li class="navbar__item">
-                  <a class="navbar__link navbar__link-index">Подбор программы</a>
+                  <a href="/form.html"class="navbar__link navbar__link-index">Подбор программы</a>
                 </li>
-
               </ul>
             </nav>
-            <nav class="hamburger">
-              <button class="hamburger__btn">
-                <img
-                  class="logo__link-img"
-                  src="./img/logo-mobile.svg"
-                  alt="logo"
-                  width="24px"
-                  height="16px"
-                />
-              </button>
-            </nav>
+              <button type="button" class="hamburger"></button>
+              <div class="layout"></div>
           </div>
         </div>
       </header>
@@ -206,57 +198,11 @@
                 <input type="range">
                 <span class="example__interactive-after">стало</span>
               </div>
-
-
               </div>
             </div>
           </div>
         </section>
-
-        <section class="map">
-          <div class="container">
-            <h2 class="visually-hidden">Наш адрес</h2>
-            <div class="map__info">
-              <p class="map__title">приглашаем
-                к сотрудничеству дилеров!</p>
-              <address class="map__address">ул. Большая
-                Конюшенная, д. 19/8
-                Санкт-Петербург</address>
-            </div>
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1ses!2sru!4v1683126471299!5m2!1ses!2sru" class="map__interactive" frameborder="0" width="100%" height="390" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" gestureHandling="cooperative"></iframe>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div class="container">
-         <div class="footer__inner">
-            <a href="/">
-              <img src='./img/logo-footer.svg' class="footer__logo" alt="Логотип">
-            </a>
-            <hr class="footer__line">
-            <ul class="footer__social-list">
-              <li class="footer__social-item">
-                <a href="https://vk.com" class="footer__social-link vk">
-                  <img src="./img/icon-vk.svg" class="footer__social-icon"  alt="Логотип ВКонтакте">
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a href="https://instagram.com" class="footer__social-link insta">
-                  <img src="./img/icon-insta.svg" class="footer__social-icon" alt="Логотип Инстаграм">
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a href="https://facebook.com" class="footer__social-link facebook">
-                  <img src="./img/icon-fb.svg" class="footer__social-icon"  alt="Логотип Фейсбук">
-                </a>
-              </li>
-            </ul>
-            <hr class="footer__line">
-         </div>
-        </div>
-      </footer>
-
-
+//= /template/map.html
+  <script src="./js/script.js"></script>
   </body>
 </html>
