@@ -29,5 +29,6 @@ function openMenu() {
 function closeMenu() {
     menu.classList.remove('show')
     overlay.classList.remove('show')
+    closeBtn.classList.remove('show')
     document.body.style.overflow = '';
 };
