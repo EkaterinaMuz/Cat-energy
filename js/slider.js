@@ -27,6 +27,7 @@ const beforeAfterSlider = () => {
   const width = control.value
   console.log(Number(width) + 5)
 	before.style.width = `${Number(width) + 2}%`;
+
 };
 
 control.addEventListener('input', (e) => {
