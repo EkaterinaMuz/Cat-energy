@@ -28,6 +28,6 @@ function openMenu() {
 
 function closeMenu() {
     menu.classList.remove('show')
-    overlay.classList.add('show')
+    overlay.classList.remove('show')
     document.body.style.overflow = '';
 };
