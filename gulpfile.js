@@ -10,8 +10,6 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const rigger = require('gulp-rigger');
-
 
 // Imagemin
 const imgoptimmize = () => {
@@ -83,6 +81,14 @@ const clean = () => {
 exports.clean = clean
 
 
+// js
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(gulp.dest('build/js'))
+}
+exports.scripts = scripts
+
 // Copy
 
 const copy = () => {
@@ -100,23 +106,12 @@ const copy = () => {
 exports.copy = copy;
 
 
-// HTML
-
-// const html = () => {
-//   return gulp.src('source/**/*.html')
-//       .pipe(rigger())
-//       .pipe(gulp.dest('build'))
-// }
-
-// exports.html = html
-
-
 // Build
 
 const build = gulp.series(
   clean,
   imgoptimmize,
-  // html,
+  scripts,
   copy,
   styles
 )

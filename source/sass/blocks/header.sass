@@ -29,6 +29,9 @@
 
 .header__logo-img
   width: 100%
+  max-width: 174px
+  @media ( min-width: 768px )
+    max-width: 200px
 
 .header__logo-text
   @media ( min-width: 768px )
@@ -48,9 +51,11 @@
     visibility: hidden
     transition: .5s all
   @media ( min-width: 768px )
-    display: none
+  //   display: none
 
 .navbar__close
+  opacity: 0
+  visibility: hidden
   position: absolute
   top: 25px
   right: 25px
@@ -65,9 +70,14 @@
   gap: 40px
   color: $default-white
   @media ( min-width: 768px )
+    flex-direction: row
     justify-content: space-between
-    width: 440px
+    width: 460px
     color: $default-black
+
+.navbar-item
+  &:first-child
+    border-bottom: 2px solid $default-white
 
 .navbar__link
   padding: 20px
@@ -79,10 +89,15 @@
   transition: 0.25s all
   &:hover
     opacity: 0.6
+  @media ( min-width: 768px )
+    padding: 0 0 10px 0
 
 .navbar__link-index
   @media ( min-width: 1200px )
     color: $default-white
+// .navbar__link-index
+  // &:first-child
+  //   border-bottom: 2px solid $default-white
 
 .hamburger
   border: none
@@ -113,3 +128,6 @@
 .show
   opacity: 1
   visibility: visible
+
+.active
+  border-bottom: 2px solid $main-green

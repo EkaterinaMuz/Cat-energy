@@ -13,6 +13,8 @@
 .promo
   width: 100%
   min-height: 480px
+  @media ( min-width: 500px )
+    min-height: 600px
   @media ( min-width: 600px )
     min-height: 700px
   @media ( min-width: 768px )
@@ -55,10 +57,14 @@
   &:hover
     background-color: $hover-green
   &:active
-    color: rgba(255, 255, 255, 0.3)
+    color: rgba(255, 255, 255, 0.6)
 
 .btn-openMore
   background-color: #F2F2F2
   color: $medium-grey
+  &:hover
+    background-color: #F2F2F2
+  &:active
+    color: rgba(0, 0, 0, 0.3)
   @media ( min-width: 1200px )
     width: 168px

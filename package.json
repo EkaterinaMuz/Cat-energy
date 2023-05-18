@@ -44,5 +44,8 @@
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "gulp-file-include": "^2.3.0"
   }
 }

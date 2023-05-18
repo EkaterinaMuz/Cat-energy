@@ -26,11 +26,15 @@
       gap: 80px
 
   &__legend
+    position: relative
     margin-bottom: 34px
     font-size: 24px
     line-height: 26px
     @media ( min-width: 768px )
       margin-bottom: 76px
+
+  &__legend-add
+    margin-bottom: 57px
 
   &__group
     width: 100%
@@ -50,6 +54,7 @@
       flex-wrap: wrap
       @media ( min-width: 1200px )
         flex-wrap: nowrap
+        min-height: auto
 
   &__group-item
     margin-bottom: 30px
@@ -58,6 +63,7 @@
       width: 50%
     @media ( min-width: 1200px )
       justify-content: center
+      align-items: center
 
   &__group--cat-info
     padding-bottom: 24px

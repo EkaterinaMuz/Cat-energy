@@ -21,12 +21,13 @@ for(item of menuItems) {
 
 function openMenu() {
     menu.classList.add('show');
-    overlay.style.display = 'block';
+    closeBtn.classList.add('show')
+    overlay.classList.add('show')
     document.body.style.overflow = 'hidden';
 };
 
 function closeMenu() {
     menu.classList.remove('show')
-    overlay.style.display = 'none';
+    overlay.classList.remove('show')
     document.body.style.overflow = '';
 };

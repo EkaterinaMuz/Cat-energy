@@ -1,5 +1,7 @@
 .subcatalog
   padding: 28px 0 40px
+  @media ( min-width: 1200px )
+    padding-bottom: 86px
   &__wrapper
     @media ( min-width: 1200px )
       width: 100%
@@ -19,18 +21,20 @@
     margin-bottom: 13px
     font-size: 24px
     line-height: 24px
-    // &::after
-    //   position: absolute
-    //   top: 50%
-    //   left: 245px
-    //   content: ''
-    //   width: calc(100vw - 338px)
-    //   height: 2px
-    //   background-color: $main-green
 
     @media ( min-width: 768px )
       padding-bottom: 0
       margin-bottom: 80px
+      &::before
+        content: ""
+        position: absolute
+        top: 14px
+        left: 260px
+        z-index: -1
+        width: calc(100vw - 320px)
+        min-width: calc(320px - 20px)
+        height: 2px
+        background-color: $main-green
 
   &__item
     position: relative
