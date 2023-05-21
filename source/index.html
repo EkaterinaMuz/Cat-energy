@@ -186,24 +186,23 @@
               </div>
 
                 <div class="example__interactive">
-                  <div class="example__interactive-cat-before">
-                    <picture>
-                      <source media="(min-width: 1200px)" srcset="./img/before-desktop@1x.png, ./img/before-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, ./img/before-tablet@2x.png 2x">
-                      <img src="./img/before-mobile@1x.png" srcset="./img/before-mobile@2x.png 2x" class="cat-before-img" alt="Кот до">
+                  <div class="example__interactive-images">
+                    <picture class="example__interactive-image example__interactive-image-before">
+                      <!-- <source media="(min-width: 1200px)" srcset="./img/before-desktop@1x.png, ./img/before-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, ./img/before-tablet@2x.png 2x"> -->
+                      <img src="./img/before-desktop-v2@1x.png" srcset="./img/before-mobile@2x.png 2x" class="cat-before-img" alt="Кот до">
+                    </picture>
+
+                    <picture class="example__interactive-image example__interactive-image-after">
+                      <!-- <source media="(min-width: 1200px)" srcset="./img/after-desktop@1x.png">
+                      <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png"> -->
+                      <img src="./img/after-desktop-v2@1x.png" class="cat-after-img" alt="Кот после">
                     </picture>
                   </div>
-                    <div class="example__interactive-cat-after">
-                      <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/after-desktop@1x.png">
-                        <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png">
-                        <img src="./img/after-mobile@1x.png" class="cat-after-img" alt="Кот после">
-                      </picture>
-                    </div>
 
                   <div class="example__interactive-control">
                     <span class="example__interactive-before">было</span>
-                    <input class="example__interactive-range" type="range">
+                    <input class="example__interactive-range" type="range" value="0" max="100" min="0">
                     <span class="example__interactive-after">стало</span>
                   </div>
                 </div>
