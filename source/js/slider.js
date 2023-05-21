@@ -1,7 +1,9 @@
 const wrapper = document.querySelector('.example__interactive');
 const control = document.querySelector('.example__interactive-range');
 const beforeImg = document.querySelector('.cat-before-img');
+const afterImg = document.querySelector('.cat-after-img');
 const before = document.querySelector('.example__interactive-cat-before');
+const after = document.querySelector('.example__interactive-cat-after');
 const body = document.body;
 
 let isActive = false;
@@ -25,8 +27,8 @@ window.onresize = function(e) {
 
 const beforeAfterSlider = () => {
   const width = control.value
-  console.log(Number(width) + 5)
 	before.style.width = `${Number(width) + 2}%`;
+	after.style.width = `${100 - (Number(width))}%`;
 
 };
 

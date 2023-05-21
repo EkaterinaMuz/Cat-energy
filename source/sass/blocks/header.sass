@@ -1,22 +1,21 @@
 .header
   width: 100%
   height: 66px
+  padding-top: 11px
   background-color: $default-white
 
   @media ( min-width: 768px )
     height: 109px
+    padding-top: 24px
 
   @media ( min-width: 1200px )
     background-color: transparent
 
 .header__inner
   display: flex
+  height: 100%
   justify-content: space-between
   align-items: center
-  padding-top: 11px
-
-  @media ( min-width: 768px )
-    padding-top: 24px
 
 .header__logo-group
   display: flex
@@ -50,8 +49,6 @@
     opacity: 0
     visibility: hidden
     transition: .5s all
-  @media ( min-width: 768px )
-  //   display: none
 
 .navbar__close
   opacity: 0
