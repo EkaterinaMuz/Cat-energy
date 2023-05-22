@@ -134,61 +134,49 @@
 
   &__interactive
     position: relative
-    min-height: 250px
-    width: 80%
-    @media ( min-width: 768px )
-      min-height: 560px
-    @media ( min-width: 1200px )
-      min-width: 690px
+    max-width: 690px
+    width: 100%
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
 
-    &-cat-before
-      display: block
+    &-images
+      margin-top: auto
+      position: relative
+      width: 100%
+      aspect-ratio: 1/.75
+
+    &-image
       position: absolute
       top: 0
-      left: 0
-      overflow: hidden
-      z-index: 1000
-      width: 50%
+      width: 100%
       height: 100%
 
-    &-cat-after
-      display: block
-      position: absolute
-      top: 0
-      right: 0
-      width: 50%
-      height: 100%
+      img
+        position: absolute
+        inset: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+      &-before
+        right: 0
+        img
+          object-position: right
+      &-after
+        left: 0
+        width: 0
+        img
+          object-position: left
 
     &-control
-      position: absolute
-      width: 100%
-      bottom: -30px
-      left: 50%
-      transform: translate(-50%)
+      display: flex
+      align-items: center
+      justify-content: center
       text-align: center
       font-size: 20px
       line-height: 30px
       text-transform: uppercase
-
-    &-before,
-    &-after
-      border: none
-      @media ( min-width: 768px )
-        border-bottom: 1px dashed $icon-color
-
-.cat-before-img
-  width: 100%
-  height: 100%
-  @media ( max-width: 1099px )
-    object-fit: contain
-
-.cat-after-img
-  width: 100%
-  height: 100%
-  object-fit: cover
-  object-position: right
-  // @media ( min-width: 1200px )
-  //   max-width: 600px
 
 @mixin thumb-style
   -webkit-appearance: none

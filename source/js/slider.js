@@ -1,41 +1,8 @@
-const wrapper = document.querySelector('.example__interactive');
-const control = document.querySelector('.example__interactive-range');
-const beforeImg = document.querySelector('.cat-before-img');
-const afterImg = document.querySelector('.cat-after-img');
-const before = document.querySelector('.example__interactive-cat-before');
-const after = document.querySelector('.example__interactive-cat-after');
-const body = document.body;
+const slider = document.querySelector('.example__interactive-range')
+const beforePicture = document.querySelector('.example__interactive-image-before')
+const afterPicture = document.querySelector('.example__interactive-image-after')
 
-let isActive = false;
-
-document.addEventListener('DOMContentLoaded', () => {
-	let width = wrapper.offsetWidth;
-	beforeImg.style.width = `${width}px`;
-});
-
-control.addEventListener('input', (e) => {
-  e.preventDefault();
-	isActive = true;
-});
-
-
-window.onresize = function(e) {
-  let width = wrapper.offsetWidth;
-	beforeImg.style.width = `${width}px`;
-
-}
-
-const beforeAfterSlider = () => {
-  const width = control.value
-	before.style.width = `${Number(width) + 2}%`;
-	after.style.width = `${100 - (Number(width))}%`;
-
-};
-
-control.addEventListener('input', (e) => {
-	if (!isActive) {
-		return;
-	}
-	beforeAfterSlider();
-});
-
+slider.addEventListener('input', function(e) {
+	beforePicture.style.width = 100 - e.target.value + '%'
+	afterPicture.style.width = e.target.value + '%'
+})

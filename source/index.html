@@ -24,28 +24,28 @@
       <header class="header">
         <div class="container">
           <div class="header__inner">
-              <a href="index.html" class="header__logo-link">
-                <picture>
-                  <source media='(min-width: 1200px)' srcset="./img/logo-desktop.svg">
-                  <source media='(min-width: 768px)' srcset="./img/logo-tablet.svg">
+                <a href="index.html" class="header__logo-link">
+                  <picture>
+                    <source media='(min-width: 1200px)' srcset="./img/logo-desktop.svg">
+                    <source media='(min-width: 768px)' srcset="./img/logo-tablet.svg">
+                    <img
+                      class="header__logo-img"
+                      src="./img/logo-mobile.svg"
+                      width="33px"
+                      height="37px"
+                      alt="logo"
+                    />
+                  </picture>
+                </a>
+                <a href="index.html" class="header__logo-link header__logo-text">
                   <img
                     class="header__logo-img"
-                    src="./img/logo-mobile.svg"
-                    width="33px"
-                    height="37px"
+                    src="./img/logo-mobile-text.svg"
                     alt="logo"
+                    width="101px"
+                    height="18px"
                   />
-                </picture>
-              </a>
-              <a href="index.html" class="header__logo-link">
-                <img
-                  class="header__logo-img header__logo-text"
-                  src="./img/logo-mobile-text.svg"
-                  alt="logo"
-                  width="101px"
-                  height="18px"
-                />
-              </a>
+                </a>
             <nav class="navbar-wrapper">
                <svg class="navbar__close" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="white"/>
@@ -186,24 +186,19 @@
               </div>
 
                 <div class="example__interactive">
-                  <div class="example__interactive-cat-before">
-                    <picture>
-                      <source media="(min-width: 1200px)" srcset="./img/before-desktop@1x.png, ./img/before-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png, ./img/before-tablet@2x.png 2x">
-                      <img src="./img/before-mobile@1x.png" srcset="./img/before-mobile@2x.png 2x" class="cat-before-img" alt="Кот до">
-                    </picture>
-                  </div>
-                    <div class="example__interactive-cat-after">
-                      <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/after-desktop@1x.png">
-                        <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png">
-                        <img src="./img/after-mobile@1x.png" class="cat-after-img" alt="Кот после">
-                      </picture>
+                  <div class="example__interactive-images">
+                    <div class="example__interactive-image example__interactive-image-before">
+                      <img src="./img/before-desktop-v2@1x.png" class="cat-before-img" alt="Кот до">
                     </div>
+
+                    <div class="example__interactive-image example__interactive-image-after">
+                      <img src="./img/after-desktop-v2@1x.png" class="cat-after-img" alt="Кот после">
+                    </div>
+                  </div>
 
                   <div class="example__interactive-control">
                     <span class="example__interactive-before">было</span>
-                    <input class="example__interactive-range" type="range">
+                    <input class="example__interactive-range" type="range" value="0" max="100" min="0">
                     <span class="example__interactive-after">стало</span>
                   </div>
                 </div>
